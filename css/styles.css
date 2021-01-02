@@ -278,6 +278,34 @@ a {
   display: block;
 }
 
+.images-li {
+  position: relative;
+}
+.images-div {
+  position: absolute;
+  bottom: 0%;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+.images-p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 205px;
+  height: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+}
+
 /* Наша команда */
 
 .team {
