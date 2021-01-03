@@ -410,6 +410,43 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
+.anime {
+  position: relative;
+}
+.anime::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+/* чтобы задать ховер чисто на фото 
+.progect-li замени на .anime и удали
+ .anime перед ::before */
+.progect-li:hover .anime::before,
+.progect-li:focus .anime::before {
+  opacity: 1;
+}
+.progect-li:hover .anime-p,
+.progect-li:focus .anime-p {
+  opacity: 1;
+}
+.anime-p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 322px;
+  height: 168px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+}
 .progect-li {
   margin-right: 30px;
   margin-bottom: 30px;
@@ -421,6 +458,7 @@ a {
   top: 330px;
   background: #ffffff;
   border: 1px solid #eeeeee;
+  cursor: pointer;
 }
 .progect-li:nth-child(3n) {
   margin-right: 0;
